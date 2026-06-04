@@ -1,0 +1,6 @@
+flask
+opencv-python
+gpiozero
+RPi.GPIO
+mfrc522
+Adafruit_DHT
