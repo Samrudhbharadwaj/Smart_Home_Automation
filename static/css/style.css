@@ -1,0 +1,826 @@
+/* ===================================
+   RESET
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --bg1:#0f172a;
+    --bg2:#1e293b;
+    --bg3:#312e81;
+
+    --glass:
+    rgba(
+        255,
+        255,
+        255,
+        .08
+    );
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+    --primary:#2563eb;
+
+    --text:#f8fafc;
+
+}
+
+/* ===================================
+   BODY
+=================================== */
+
+body{
+
+    min-height:100vh;
+
+    color:var(--text);
+
+    font-family:
+    "Segoe UI",
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--bg1),
+        var(--bg2),
+        var(--bg3)
+    );
+
+    background-size:
+    400% 400%;
+
+    animation:
+    bgMove 15s ease infinite;
+    
+    overflow-x: hidden;
+
+}
+
+@keyframes bgMove{
+
+    0%{
+        background-position:
+        0% 50%;
+    }
+
+    50%{
+        background-position:
+        100% 50%;
+    }
+
+    100%{
+        background-position:
+        0% 50%;
+    }
+
+}
+
+/* ===================================
+   GLASS CARDS
+=================================== */
+
+.glass-card{
+
+    background:
+    var(--glass);
+
+    backdrop-filter:
+    blur(18px);
+
+    border:
+    1px solid rgba(
+        255,
+        255,
+        255,
+        .15
+    );
+
+    border-radius:
+    22px;
+
+    box-shadow:
+    0 8px 32px rgba(
+        0,
+        0,
+        0,
+        .25
+    );
+
+    transition:
+    .3s;
+
+}
+
+.glass-card:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+/* ===================================
+   SMART DEVICE CARD
+=================================== */
+
+.smart-card{
+
+    padding:25px;
+
+    text-align:center;
+
+    min-height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+}
+
+.smart-card:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.02);
+
+}
+
+@media(max-width:992px){
+
+    .smart-card:hover{
+        transform:
+        translateY(-3px)
+        scale(1.01);
+    }
+
+}
+
+@media(max-width:576px){
+
+    .smart-card:hover{
+        transform:
+        translateY(-2px);
+    }
+
+}
+
+.device-icon{
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
+}
+
+.device-title{
+
+    font-size:22px;
+
+    font-weight:600;
+
+}
+
+.device-state{
+
+    margin-top:15px;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    min-width:120px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.device-state.on{
+
+    background:
+    var(--success);
+
+    color:white;
+
+}
+
+.device-state.off{
+
+    background:
+    var(--danger);
+
+    color:white;
+
+}
+
+/* ===================================
+   STATUS CARDS
+=================================== */
+
+.status-card{
+
+    padding:20px;
+
+    min-height:180px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+.status-card h2{
+
+    margin-top:12px;
+
+}
+/* ===================================
+   SWITCH
+=================================== */
+
+.switch{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:64px;
+
+    height:34px;
+
+    margin-top:18px;
+
+}
+
+.switch input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:#64748b;
+
+    transition:.4s;
+
+    border-radius:34px;
+
+}
+
+.slider:before{
+
+    position:absolute;
+
+    content:"";
+
+    height:26px;
+
+    width:26px;
+
+    left:4px;
+
+    bottom:4px;
+
+    background:white;
+
+    transition:.4s;
+
+    border-radius:50%;
+
+}
+
+input:checked + .slider{
+
+    background:#22c55e;
+
+}
+
+input:checked + .slider:before{
+
+    transform:
+    translateX(30px);
+
+}
+
+/* ===================================
+   FAN MODE BUTTONS
+=================================== */
+
+.fan-mode-group{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+    width:100%;
+
+}
+
+.fan-mode-group button{
+
+    flex:1;
+
+    border-radius:12px;
+
+}
+
+/* ===================================
+   RFID
+=================================== */
+
+#rfidResult{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.form-control{
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        .08
+    );
+
+    border:none;
+
+    color:white;
+
+}
+
+.form-control:focus{
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        .12
+    );
+
+    color:white;
+
+    box-shadow:none;
+
+}
+
+.form-control::placeholder{
+
+    color:#cbd5e1;
+
+}
+
+/* ===================================
+   GAS
+=================================== */
+
+#gasValue{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+}
+
+.status-safe{
+
+    color:#22c55e;
+    font-weight:bold;
+
+}
+
+.status-warning{
+
+    color:#f59e0b;
+    font-weight:bold;
+
+}
+
+.status-danger{
+
+    color:#ef4444;
+    font-weight:bold;
+
+}
+
+.status-open{
+
+    color:#22c55e;
+    font-weight:bold;
+
+}
+
+.status-closed{
+
+    color:#ef4444;
+    font-weight:bold;
+
+}
+
+/* ===================================
+   CAMERA
+=================================== */
+
+#cameraFeed{
+
+    width:100%;
+
+    border-radius:16px;
+
+    margin-top:20px;
+
+    border:1px solid rgba(
+        255,
+        255,
+        255,
+        .15
+    );
+
+    max-height:500px;
+
+    object-fit:cover;
+
+}
+
+/* ===================================
+   TIMELINE
+=================================== */
+
+.timeline-card{
+
+    padding:25px;
+
+}
+
+.timeline-item{
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        .05
+    );
+
+    border-left:
+    4px solid
+    #38bdf8;
+
+    border-radius:
+    12px;
+
+    padding:
+    12px;
+
+    margin-bottom:
+    10px;
+
+}
+
+.timeline-time{
+
+    font-size:13px;
+
+    color:#94a3b8;
+
+    margin-bottom:5px;
+
+}
+
+/* ===================================
+   TOASTS
+=================================== */
+
+#toastContainer{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:9999;
+
+}
+
+.toast-card{
+
+    background:
+    rgba(
+        0,
+        0,
+        0,
+        .85
+    );
+
+    color:white;
+
+    padding:12px 16px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    min-width:240px;
+
+    animation:
+    slideIn .3s ease;
+
+}
+
+@keyframes slideIn{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(100px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0);
+
+    }
+
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.btn{
+
+    border-radius:12px;
+
+}
+
+.btn:hover{
+
+    transform:
+    translateY(-2px);
+
+}
+
+/* ===================================
+   SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#475569;
+
+    border-radius:10px;
+
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:576px){
+
+    body{
+        padding:0;
+    }
+
+    .container-fluid{
+        padding:0.5rem;
+    }
+
+    .glass-card{
+        padding:1rem !important;
+    }
+
+    .smart-card{
+
+        width:100%;
+        min-height:250px;
+        padding:15px;
+
+    }
+
+    .device-state{
+
+        width:100%;
+
+    }
+
+    .fan-mode-group button{
+
+        min-height:45px;
+
+        font-size:14px;
+
+    }
+
+    .smart-card{
+
+        min-height:auto;
+
+        padding:20px;
+
+    }
+
+    .status-card{
+
+        min-height:auto;
+        padding:15px;
+
+    }
+
+    .fan-mode-group{
+
+        flex-direction:column;
+
+    }
+
+    #toastContainer{
+
+        left:10px;
+        right:10px;
+
+        top:10px;
+
+    }
+
+    .toast-card{
+
+        width:100%;
+
+        min-width:auto;
+        font-size:14px;
+
+    }
+
+    .device-icon{
+
+        font-size:36px;
+
+    }
+
+    .device-title{
+
+        font-size:16px;
+
+    }
+
+    h2{
+        font-size:1.5rem !important;
+    }
+
+    h4{
+        font-size:1.1rem !important;
+    }
+
+    .btn{
+        padding:0.5rem 1rem;
+        font-size:14px;
+    }
+
+    #cameraFeed{
+        min-height:200px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .smart-card{
+
+        width:100%;
+
+    }
+
+    .device-state{
+
+        width:100%;
+
+    }
+
+    .fan-mode-group button{
+
+        min-height:50px;
+
+        font-size:16px;
+
+    }
+
+    .smart-card{
+
+        min-height:auto;
+
+        padding:20px;
+
+    }
+
+    .status-card{
+
+        min-height:auto;
+
+    }
+
+    .fan-mode-group{
+
+        flex-direction:column;
+
+    }
+
+    #toastContainer{
+
+        left:10px;
+        right:10px;
+
+        top:10px;
+
+    }
+
+    .toast-card{
+
+        width:100%;
+
+        min-width:auto;
+
+    }
+
+    .device-icon{
+
+        font-size:42px;
+
+    }
+
+    .device-title{
+
+        font-size:18px;
+
+    }
+
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media(
+min-width:769px
+) and (
+max-width:1200px
+){
+
+    .smart-card{
+
+        min-height:250px;
+
+    }
+
+}
