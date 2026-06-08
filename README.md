@@ -163,7 +163,6 @@ Login credentials:
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 51 00 PM" src="https://github.com/user-attachments/assets/bead2211-1b31-4d4d-abf9-9489e3ea0b5e" />
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 51 00 PM (1)" src="https://github.com/user-attachments/assets/099d1ff1-63fb-4ce4-aae3-e1f27f14472b" />
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 51 01 PM" src="https://github.com/user-attachments/assets/ee16e27e-9cb1-46bd-8a6e-d8891daafaec" />
-<img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 50 55 PM" src="https://github.com/user-attachments/assets/de023e9e-d062-4bb0-9275-1d93a0a5e5c3" />
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 50 57 PM" src="https://github.com/user-attachments/assets/d2925d23-7533-4bdf-9037-978fec3aa4da" />
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 50 57 PM (1)" src="https://github.com/user-attachments/assets/c42a334e-3efe-41fd-a0ae-a1c52fc31b95" />
 <img width="1280" height="574" alt="WhatsApp Image 2026-06-05 at 9 50 57 PM (2)" src="https://github.com/user-attachments/assets/088ed362-d1b4-42df-aaf7-7153d6c3d992" />
